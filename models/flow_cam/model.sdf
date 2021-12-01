@@ -3,7 +3,7 @@
   <model name="camera">
     <link name="link">
       <inertial>
-        <pose>0.01 0.025 0.025 0 -0 0</pose>
+        <pose>0.01 0.025 0.025 0 0 0</pose>
         <mass>0.01</mass>
         <inertia>
           <ixx>4.15e-6</ixx>
@@ -45,8 +45,9 @@
             <stddev>0.001</stddev>
           </noise>
         </camera>
-        <plugin name="opticalflow_plugin" filename="librotors_gazebo_optical_flow_plugin.so">
+        <plugin name="opticalflow_plugin" filename="libgazebo_opticalflow_plugin.so">
             <robotNamespace></robotNamespace>
+            <outputRate>20</outputRate>
         </plugin>
       </sensor>
     </link>
